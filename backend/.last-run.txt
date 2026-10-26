@@ -1,0 +1,83 @@
+...................................FF................................... [ 67%]
+...................................                                      [100%]
+================================== FAILURES ===================================
+____________________ test_all_backend_codes_translated[en] ____________________
+
+lang = 'en'
+
+    @pytest.mark.parametrize("lang", ["en", "lv"])
+    def test_all_backend_codes_translated(lang: str) -> None:
+        catalogue = json.loads((LOCALES / f"{lang}.json").read_text(encoding="utf-8"))
+        codes = _backend_codes()
+        assert len(codes) > 40
+        missing = sorted(c for c in codes if not isinstance(_lookup(catalogue["errors"], c), str))
+>       assert missing == []
+E       AssertionError: assert ['stream.limi...stream_error'] == []
+E         
+E         Left contains 2 more items, first extra item: 'stream.limit_reached'
+E         Use -v to get more diff
+
+tests\test_i18n_codes.py:43: AssertionError
+____________________ test_all_backend_codes_translated[lv] ____________________
+
+lang = 'lv'
+
+    @pytest.mark.parametrize("lang", ["en", "lv"])
+    def test_all_backend_codes_translated(lang: str) -> None:
+        catalogue = json.loads((LOCALES / f"{lang}.json").read_text(encoding="utf-8"))
+        codes = _backend_codes()
+        assert len(codes) > 40
+        missing = sorted(c for c in codes if not isinstance(_lookup(catalogue["errors"], c), str))
+>       assert missing == []
+E       AssertionError: assert ['stream.limi...stream_error'] == []
+E         
+E         Left contains 2 more items, first extra item: 'stream.limit_reached'
+E         Use -v to get more diff
+
+tests\test_i18n_codes.py:43: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\Projects\SecurityCameraApp\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_i18n_codes.py::test_all_backend_codes_translated[en] - Asse...
+FAILED tests/test_i18n_codes.py::test_all_backend_codes_translated[lv] - Asse...
+2 failed, 105 passed, 1 warning in 25.62s
+SIM105 Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`
+  --> app\sysinfo.py:36:5
+   |
+34 |           pass
+35 |       load = None
+36 | /     try:
+37 | |         load = [float(x) for x in Path("/proc/loadavg").read_text().split()[:3]]
+38 | |     except OSError:
+39 | |         pass
+   | |____________^
+40 |       total, avail = mem.get("MemTotal"), mem.get("MemAvailable")
+41 |       return {
+   |
+help: Replace `try`-`except`-`pass` with `with contextlib.suppress(OSError): ...`
+   |
+5  | from typing import Any
+6  + import contextlib
+7  |
+--------------------------------------------------------------------------------
+36 |     load = None
+   -     try:
+37 +     with contextlib.suppress(OSError):
+38 |         load = [float(x) for x in Path("/proc/loadavg").read_text().split()[:3]]
+   -     except OSError:
+   -         pass
+39 |     total, avail = mem.get("MemTotal"), mem.get("MemAvailable")
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 1 error.
+1 unsafe fix available with `--fix --unsafe-fixes`.
+app\routers\live.py:81: error: Argument 2 to "get_stream_source" of "Provider" has incompatible type "str"; expected "Literal['main', 'sub']"  [arg-type]
+tests\test_streams.py:64: error: Value of type "Iterable[socket]" is not indexable  [index]
+tests\test_streams.py:64: note: Error code "index" not covered by "type: ignore" comment
+tests\test_streams.py:279: error: Module "websockets" does not explicitly export attribute "__version__"  [attr-defined]
+Found 3 errors in 2 files (checked 43 source files)

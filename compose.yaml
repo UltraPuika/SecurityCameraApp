@@ -1,0 +1,57 @@
+name: camdash
+
+services:
+  app:
+    build: .
+    image: camdash:${CAMDASH_VERSION:-0.1.0}
+    env_file: .env
+    environment:
+      CAMDASH_DATABASE_URL: sqlite:////data/camdash.db
+      CAMDASH_GO2RTC_URL: http://go2rtc:1984
+    depends_on:
+      go2rtc:
+        condition: service_healthy
+    ports:
+      - "${CAMDASH_BIND_ADDRESS:-127.0.0.1}:${CAMDASH_WEB_PORT:-8080}:8000"
+    volumes:
+      - camdash-data:/data
+    networks:
+      - camdash
+    restart: unless-stopped
+    mem_limit: 256m
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    command: ["go2rtc", "-config", "/config/go2rtc.yaml"]
+    volumes:
+      - ./go2rtc/go2rtc.yaml:/config/go2rtc.yaml:ro
+    networks:
+      - camdash
+    restart: unless-stopped
+    mem_limit: 384m
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:1984/api"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  camdash-data:
+
+networks:
+  camdash:

@@ -1,0 +1,332 @@
+{
+  "app": {
+    "name": "Camera dashboard",
+    "loading": "Loading…"
+  },
+  "nav": {
+    "all": "All cameras",
+    "favourites": "Favourites",
+    "locations": "Locations",
+    "offline": "Offline",
+    "settings": "Settings",
+    "logout": "Log out",
+    "menu": "Menu"
+  },
+  "login": {
+    "title": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Signing in…"
+  },
+  "dashboard": {
+    "empty_title": "No cameras yet",
+    "empty_body": "Cameras you add will appear here.",
+    "no_match": "No cameras match the filters."
+  },
+  "filters": {
+    "search": "Search cameras",
+    "location": "Location",
+    "provider": "Type",
+    "status": "Status",
+    "all_locations": "All locations",
+    "all_providers": "All types",
+    "all_statuses": "All statuses"
+  },
+  "status": {
+    "unknown": "Not checked",
+    "online": "Online",
+    "sleeping": "Sleeping",
+    "offline": "Offline",
+    "needs_setup": "Needs setup",
+    "unsupported": "Unsupported",
+    "quota": "Quota reached"
+  },
+  "transport": {
+    "local": "Local network",
+    "cloud": "Cloud-relayed"
+  },
+  "live": {
+    "video": "Live video",
+    "live": "Live",
+    "connecting": "Connecting…",
+    "waiting": "Waiting for video…",
+    "playing": "Live",
+    "error": "No video",
+    "stopped": "Stopped",
+    "wake": "Wake and view",
+    "wake_hint": "Battery camera: starts only on request (uses battery and cloud quota)."
+  },
+  "grid": {
+    "layout": "Grid layout",
+    "pages": "Pages",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {{page}} of {{pages}}"
+  },
+  "viewer": {
+    "back": "Back",
+    "prev": "Previous camera",
+    "next": "Next camera",
+    "fullscreen": "Full-screen mode",
+    "hint": "Arrow keys or swipe: other cameras · F: full screen · Esc: back · pinch to zoom, double-tap to reset."
+  },
+  "diagnostics": {
+    "title": "Diagnostics",
+    "backend": "Backend",
+    "db": "Database",
+    "go2rtc": "Streaming service (go2rtc)",
+    "streams": "Active streams",
+    "streams_value": "{{active}} of max. {{max}}",
+    "cpu": "CPU",
+    "ram": "RAM",
+    "na": "not available",
+    "cameras": "Cameras",
+    "verified": "video verified",
+    "unverified": "video not yet verified",
+    "logs": "Recent log (secrets removed)",
+    "health_ok": "OK",
+    "health_error": "Error"
+  },
+  "camera": {
+    "name": "Name",
+    "location": "Location",
+    "group": "Group",
+    "favourite": "Favourite",
+    "provider": "Camera type",
+    "account": "Cloud account",
+    "transport": "Connection",
+    "quality": "Stream",
+    "last_seen": "Last seen",
+    "never": "Never",
+    "fix": "Fix setup",
+    "no_location": "No location"
+  },
+  "cameras": {
+    "title": "Cameras",
+    "add": "Add camera",
+    "edit": "Edit camera",
+    "last_checked": "Checked {{when}}",
+    "confirm_delete": "Delete camera “{{name}}”?"
+  },
+  "accounts": {
+    "title": "Cloud accounts",
+    "intro": "Imou cameras are reached through your free Imou developer app. Add its App ID and App Secret here; they are stored encrypted and never shown again.",
+    "add": "Add account",
+    "none_yet": "Add a cloud account first under Settings → Cloud accounts.",
+    "show_devices": "Show cameras",
+    "no_devices": "This account has no cameras.",
+    "channel": "Device {{device}}, channel {{channel}}",
+    "already_added": "Already added",
+    "add_camera": "Add",
+    "confirm_delete": "Delete account “{{name}}”?"
+  },
+  "providers": {
+    "generic": "Generic RTSP / ONVIF",
+    "bitvision": "BitVision (NVR or camera)",
+    "imou": "Imou (cloud)"
+  },
+  "providers_help": {
+    "generic": "Any camera with RTSP or ONVIF on your network or VPN.",
+    "bitvision": "Use the NVR's IP address and the camera's channel number. The stream address is read via ONVIF.",
+    "imou": "Streams are relayed through the Imou cloud and use your developer quota."
+  },
+  "fields": {
+    "host": "IP address or host name",
+    "username": "Username",
+    "password": "Password",
+    "use_onvif": "Find stream addresses via ONVIF",
+    "onvif_port": "ONVIF port",
+    "onvif_https": "ONVIF over HTTPS",
+    "channel": "Channel",
+    "rtsp_port": "RTSP port",
+    "rtsp_tls": "RTSP over TLS (rtsps)",
+    "main_path": "Main stream path",
+    "sub_path": "Substream path",
+    "device_id": "Device serial number",
+    "channel_id": "Channel ID",
+    "battery": "Battery camera (start only on demand)",
+    "data_center": "Data centre",
+    "app_id": "App ID",
+    "app_secret": "App Secret"
+  },
+  "fields_help": {
+    "host": "Must be a private (LAN) or VPN address.",
+    "main_path": "Optional when ONVIF is used. Example: /ch01/0",
+    "channel": "For an NVR: the camera's channel number (1 = first camera).",
+    "data_center": "Shown in the Imou developer console under My Information."
+  },
+  "options": {
+    "data_center": {
+      "sg": "East Asia (Singapore)",
+      "fk": "Central Europe (Frankfurt)",
+      "or": "Western America (Oregon)"
+    }
+  },
+  "form": {
+    "connection": "Connection",
+    "choose": "Choose…",
+    "secret_stored": "Stored — leave empty to keep",
+    "test": "Test connection",
+    "testing": "Testing…",
+    "save": "Save",
+    "save_anyway": "Save anyway",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "test_first": "Run a connection test before saving."
+  },
+  "diag": {
+    "ok": "All checks passed.",
+    "failed": "Some checks failed.",
+    "status_pass": "passed",
+    "status_fail": "failed",
+    "status_skip": "skipped",
+    "step_dns": "Address",
+    "step_tcp": "Network connection",
+    "step_auth": "Sign-in",
+    "step_onvif": "ONVIF",
+    "step_stream_main": "Main stream",
+    "step_stream_sub": "Substream",
+    "step_device": "Camera status",
+    "step_devices": "Camera list",
+    "step_provider": "Setup",
+    "method_onvif": "via ONVIF",
+    "method_rtsp": "via RTSP",
+    "fact_ip": "IP {{ip}}",
+    "fact_port": "port {{port}}",
+    "fact_fps": "{{fps}} fps",
+    "fact_channels": "channels: {{count}}",
+    "fact_profiles": "profiles: {{count}}"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "language_saved": "Language saved.",
+    "signed_in_as": "Signed in as {{username}} ({{role}})"
+  },
+  "role": {
+    "admin": "administrator",
+    "viewer": "viewer"
+  },
+  "language": {
+    "en": "English",
+    "lv": "Latviešu"
+  },
+  "errors": {
+    "auth": {
+      "invalid_credentials": "Incorrect username or password.",
+      "rate_limited": "Too many failed attempts. Try again in {{seconds}} s.",
+      "not_authenticated": "Your session has expired. Please sign in again.",
+      "csrf_failed": "Security check failed. Reload the page and try again.",
+      "bad_origin": "Request blocked: it did not come from this app.",
+      "forbidden": "You do not have permission to do this."
+    },
+    "validation": {
+      "invalid": "Some fields are invalid.",
+      "required": "Required field is empty: {{field}}.",
+      "out_of_range": "Value out of range: {{field}}.",
+      "unknown_field": "Unknown field.",
+      "invalid_path": "Stream path must start with “/” and contain no spaces or “@”."
+    },
+    "net": {
+      "invalid_host": "Not a valid IP address or host name.",
+      "forbidden_address": "This address is not allowed (loopback, link-local or cloud metadata).",
+      "not_private": "Only private LAN or VPN addresses are allowed. Add the network to CAMDASH_ALLOWED_CAMERA_NETWORKS if needed.",
+      "dns_failed": "Host name could not be resolved.",
+      "tcp_timeout": "No answer from the device. Is it powered on and reachable from the server?",
+      "tcp_refused": "The device refused the connection on this port.",
+      "tls_failed": "TLS handshake failed (certificate not trusted?).",
+      "generic": "Network error ({{code}})."
+    },
+    "rtsp": {
+      "auth_required": "The camera requires a username and password.",
+      "auth_failed": "Wrong username or password.",
+      "forbidden": "The camera denied access to this stream.",
+      "not_found": "Stream path not found on the camera.",
+      "timeout": "The camera did not answer in time.",
+      "connection_closed": "The camera closed the connection.",
+      "bad_response": "Unexpected answer from the camera.",
+      "bad_status": "The camera returned an error ({{rtsp_status}}).",
+      "generic": "RTSP error ({{code}})."
+    },
+    "onvif": {
+      "auth_failed": "ONVIF sign-in failed. Check the username and password, and that ONVIF is enabled.",
+      "timeout": "ONVIF did not answer in time. Check the ONVIF port.",
+      "unreachable": "ONVIF service not reachable. Check the ONVIF port or enable ONVIF on the device.",
+      "bad_response": "The ONVIF answer could not be read.",
+      "fault": "The device rejected the ONVIF request.",
+      "no_stream_uri": "The device did not report a stream address.",
+      "channel_not_found": "This channel does not exist (the device has {{channels}}).",
+      "generic": "ONVIF error ({{code}})."
+    },
+    "stream": {
+      "path_unknown": "Stream path unknown: enable ONVIF or enter the path manually.",
+      "no_substream": "No substream; the main stream will be used for the grid.",
+      "limit_reached": "Too many streams at once (max. {{max}}). Close another camera or wait.",
+      "upstream_error": "The camera stream stopped. Reconnecting…",
+      "generic": "Stream error ({{code}})."
+    },
+    "go2rtc": {
+      "unreachable": "The streaming service is not running.",
+      "rejected": "The streaming service rejected the camera.",
+      "generic": "Streaming service error ({{code}})."
+    },
+    "player": {
+      "mse_unsupported": "This browser cannot play live video (Media Source Extensions missing). On iPhone, iOS 17.1 or newer is required.",
+      "codec_unsupported": "This browser cannot play the camera's video format (often H.265).",
+      "append_failed": "Video data could not be played. Reconnecting…",
+      "generic": "Player error ({{code}})."
+    },
+    "codec": {
+      "h265_limited_browser_support": "H.265 stream: many browsers cannot play it. Set this stream to H.264 in the camera settings if possible."
+    },
+    "imou": {
+      "offline": "The camera is offline in the Imou cloud.",
+      "sleeping": "The camera is asleep; it will wake when opened.",
+      "upgrading": "The camera is updating its firmware.",
+      "device_not_found": "Imou does not know this device on your account.",
+      "channel_not_found": "This channel does not exist on the device.",
+      "realname_required": "Imou requires identity verification on your developer account before live streams can be created.",
+      "not_permitted": "Imou does not allow this for your app or device ({{vendor_code}}).",
+      "quota_exceeded": "Imou free quota reached ({{vendor_code}}). Check My Resources in the Imou developer console.",
+      "auth_failed": "Imou rejected the App ID / App Secret ({{vendor_code}}).",
+      "timeout": "The Imou cloud did not answer in time.",
+      "unreachable": "The Imou cloud could not be reached.",
+      "http_error": "The Imou cloud returned an error.",
+      "bad_response": "Unexpected answer from the Imou cloud.",
+      "live_created_on_first_view": "Cloud stream will be created when first opened (not done during the test, to save battery and quota).",
+      "unexpected_stream_host": "The Imou cloud returned an unexpected stream address; it was blocked.",
+      "account_required": "Choose an Imou cloud account.",
+      "generic": "Imou cloud error ({{code}})."
+    },
+    "provider": {
+      "unknown": "Unknown camera type.",
+      "invalid_config": "Invalid settings.",
+      "unsupported": "Not supported by this camera.",
+      "auth_failed": "Sign-in failed.",
+      "unreachable": "Device not reachable.",
+      "timeout": "The device did not answer in time.",
+      "quota_exceeded": "Quota reached.",
+      "snapshot_unsupported": "Snapshots are not supported.",
+      "error": "The camera reported an error.",
+      "generic": "Camera error ({{code}})."
+    },
+    "bitvision": {
+      "default_password": "This is the factory default password. Change it on the NVR first, then enter the new one."
+    },
+    "camera": {
+      "not_found": "Camera not found.",
+      "account_required": "Choose a cloud account.",
+      "provider_immutable": "The camera type cannot be changed."
+    },
+    "account": {
+      "not_found": "Account not found.",
+      "in_use": "This account is still used by cameras.",
+      "provider_immutable": "The account type cannot be changed."
+    },
+    "not_found": "Not found.",
+    "network": "Cannot reach the server.",
+    "unknown": "Something went wrong.",
+    "unknown_code": "Error: {{code}}"
+  }
+}

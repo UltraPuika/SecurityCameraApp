@@ -1,0 +1,332 @@
+{
+  "app": {
+    "name": "Kameru panelis",
+    "loading": "Ielādē…"
+  },
+  "nav": {
+    "all": "Visas kameras",
+    "favourites": "Izlase",
+    "locations": "Atrašanās vietas",
+    "offline": "Bezsaistē",
+    "settings": "Iestatījumi",
+    "logout": "Iziet",
+    "menu": "Izvēlne"
+  },
+  "login": {
+    "title": "Pieteikties",
+    "username": "Lietotājvārds",
+    "password": "Parole",
+    "submit": "Pieteikties",
+    "submitting": "Piesakās…"
+  },
+  "dashboard": {
+    "empty_title": "Vēl nav nevienas kameras",
+    "empty_body": "Šeit tiks parādītas pievienotās kameras.",
+    "no_match": "Neviena kamera neatbilst filtriem."
+  },
+  "filters": {
+    "search": "Meklēt kameras",
+    "location": "Atrašanās vieta",
+    "provider": "Veids",
+    "status": "Statuss",
+    "all_locations": "Visas atrašanās vietas",
+    "all_providers": "Visi veidi",
+    "all_statuses": "Visi statusi"
+  },
+  "status": {
+    "unknown": "Nav pārbaudīta",
+    "online": "Tiešsaistē",
+    "sleeping": "Miega režīmā",
+    "offline": "Bezsaistē",
+    "needs_setup": "Nepieciešama iestatīšana",
+    "unsupported": "Neatbalstīta",
+    "quota": "Limits sasniegts"
+  },
+  "transport": {
+    "local": "Lokālais tīkls",
+    "cloud": "Caur mākoni"
+  },
+  "live": {
+    "video": "Tiešraides video",
+    "live": "Tiešraide",
+    "connecting": "Savienojas…",
+    "waiting": "Gaida video…",
+    "playing": "Tiešraide",
+    "error": "Nav video",
+    "stopped": "Apturēta",
+    "wake": "Pamodināt un skatīties",
+    "wake_hint": "Akumulatora kamera: ieslēdzas tikai pēc pieprasījuma (patērē akumulatoru un mākoņa limitu)."
+  },
+  "grid": {
+    "layout": "Režģa izkārtojums",
+    "pages": "Lapas",
+    "prev": "Iepriekšējā",
+    "next": "Nākamā",
+    "page": "{{page}}. lapa no {{pages}}"
+  },
+  "viewer": {
+    "back": "Atpakaļ",
+    "prev": "Iepriekšējā kamera",
+    "next": "Nākamā kamera",
+    "fullscreen": "Pilnekrāna režīms",
+    "hint": "Bulttaustiņi vai vilkšana: citas kameras · F: pilnekrāna režīms · Esc: atpakaļ · savelciet ar diviem pirkstiem, lai tuvinātu, dubultpieskāriens atiestata."
+  },
+  "diagnostics": {
+    "title": "Diagnostika",
+    "backend": "Serveris",
+    "db": "Datubāze",
+    "go2rtc": "Straumēšanas pakalpojums (go2rtc)",
+    "streams": "Aktīvās straumes",
+    "streams_value": "{{active}} no maks. {{max}}",
+    "cpu": "Procesors",
+    "ram": "Atmiņa",
+    "na": "nav pieejams",
+    "cameras": "Kameras",
+    "verified": "video pārbaudīts",
+    "unverified": "video vēl nav pārbaudīts",
+    "logs": "Jaunākie žurnāla ieraksti (bez slepenajiem datiem)",
+    "health_ok": "Darbojas",
+    "health_error": "Kļūda"
+  },
+  "camera": {
+    "name": "Nosaukums",
+    "location": "Atrašanās vieta",
+    "group": "Grupa",
+    "favourite": "Izlasē",
+    "provider": "Kameras veids",
+    "account": "Mākoņa konts",
+    "transport": "Savienojums",
+    "quality": "Straume",
+    "last_seen": "Pēdējo reizi redzēta",
+    "never": "Nekad",
+    "fix": "Labot iestatījumus",
+    "no_location": "Bez atrašanās vietas"
+  },
+  "cameras": {
+    "title": "Kameras",
+    "add": "Pievienot kameru",
+    "edit": "Rediģēt kameru",
+    "last_checked": "Pārbaudīta {{when}}",
+    "confirm_delete": "Dzēst kameru “{{name}}”?"
+  },
+  "accounts": {
+    "title": "Mākoņa konti",
+    "intro": "Imou kameras tiek sasniegtas caur jūsu bezmaksas Imou izstrādātāja lietotni. Ievadiet šeit tās App ID un App Secret — tie tiek glabāti šifrēti un vairs netiek rādīti.",
+    "add": "Pievienot kontu",
+    "none_yet": "Vispirms pievienojiet mākoņa kontu sadaļā Iestatījumi → Mākoņa konti.",
+    "show_devices": "Rādīt kameras",
+    "no_devices": "Šim kontam nav kameru.",
+    "channel": "Ierīce {{device}}, kanāls {{channel}}",
+    "already_added": "Jau pievienota",
+    "add_camera": "Pievienot",
+    "confirm_delete": "Dzēst kontu “{{name}}”?"
+  },
+  "providers": {
+    "generic": "Vispārīga RTSP / ONVIF",
+    "bitvision": "BitVision (NVR vai kamera)",
+    "imou": "Imou (mākonis)"
+  },
+  "providers_help": {
+    "generic": "Jebkura kamera ar RTSP vai ONVIF jūsu tīklā vai VPN.",
+    "bitvision": "Norādiet NVR IP adresi un kameras kanāla numuru. Straumes adrese tiek nolasīta caur ONVIF.",
+    "imou": "Straumes tiek pārraidītas caur Imou mākoni un patērē jūsu izstrādātāja limitu."
+  },
+  "fields": {
+    "host": "IP adrese vai resursdatora nosaukums",
+    "username": "Lietotājvārds",
+    "password": "Parole",
+    "use_onvif": "Atrast straumes adreses caur ONVIF",
+    "onvif_port": "ONVIF ports",
+    "onvif_https": "ONVIF caur HTTPS",
+    "channel": "Kanāls",
+    "rtsp_port": "RTSP ports",
+    "rtsp_tls": "RTSP caur TLS (rtsps)",
+    "main_path": "Galvenās straumes ceļš",
+    "sub_path": "Apakšstraumes ceļš",
+    "device_id": "Ierīces sērijas numurs",
+    "channel_id": "Kanāla ID",
+    "battery": "Akumulatora kamera (palaist tikai pēc pieprasījuma)",
+    "data_center": "Datu centrs",
+    "app_id": "App ID",
+    "app_secret": "App Secret"
+  },
+  "fields_help": {
+    "host": "Jābūt privātai (LAN) vai VPN adresei.",
+    "main_path": "Nav obligāts, ja izmanto ONVIF. Piemērs: /ch01/0",
+    "channel": "NVR gadījumā — kameras kanāla numurs (1 = pirmā kamera).",
+    "data_center": "Redzams Imou izstrādātāja konsolē sadaļā “My Information”."
+  },
+  "options": {
+    "data_center": {
+      "sg": "Austrumāzija (Singapūra)",
+      "fk": "Centrāleiropa (Frankfurte)",
+      "or": "Rietumamerika (Oregona)"
+    }
+  },
+  "form": {
+    "connection": "Savienojums",
+    "choose": "Izvēlieties…",
+    "secret_stored": "Saglabāta — atstājiet tukšu, lai nemainītu",
+    "test": "Pārbaudīt savienojumu",
+    "testing": "Pārbauda…",
+    "save": "Saglabāt",
+    "save_anyway": "Tomēr saglabāt",
+    "saving": "Saglabā…",
+    "delete": "Dzēst",
+    "test_first": "Pirms saglabāšanas pārbaudiet savienojumu."
+  },
+  "diag": {
+    "ok": "Visas pārbaudes izdevās.",
+    "failed": "Dažas pārbaudes neizdevās.",
+    "status_pass": "izdevās",
+    "status_fail": "neizdevās",
+    "status_skip": "izlaista",
+    "step_dns": "Adrese",
+    "step_tcp": "Tīkla savienojums",
+    "step_auth": "Pieteikšanās",
+    "step_onvif": "ONVIF",
+    "step_stream_main": "Galvenā straume",
+    "step_stream_sub": "Apakšstraume",
+    "step_device": "Kameras statuss",
+    "step_devices": "Kameru saraksts",
+    "step_provider": "Iestatījumi",
+    "method_onvif": "caur ONVIF",
+    "method_rtsp": "caur RTSP",
+    "fact_ip": "IP {{ip}}",
+    "fact_port": "ports {{port}}",
+    "fact_fps": "{{fps}} kadri/s",
+    "fact_channels": "kanāli: {{count}}",
+    "fact_profiles": "profili: {{count}}"
+  },
+  "settings": {
+    "title": "Iestatījumi",
+    "language": "Valoda",
+    "language_saved": "Valoda saglabāta.",
+    "signed_in_as": "Pieteicies kā {{username}} ({{role}})"
+  },
+  "role": {
+    "admin": "administrators",
+    "viewer": "skatītājs"
+  },
+  "language": {
+    "en": "English",
+    "lv": "Latviešu"
+  },
+  "errors": {
+    "auth": {
+      "invalid_credentials": "Nepareizs lietotājvārds vai parole.",
+      "rate_limited": "Pārāk daudz neveiksmīgu mēģinājumu. Mēģiniet vēlreiz pēc {{seconds}} s.",
+      "not_authenticated": "Sesija ir beigusies. Lūdzu, piesakieties vēlreiz.",
+      "csrf_failed": "Drošības pārbaude neizdevās. Pārlādējiet lapu un mēģiniet vēlreiz.",
+      "bad_origin": "Pieprasījums bloķēts: tas nenāca no šīs lietotnes.",
+      "forbidden": "Jums nav atļaujas to darīt."
+    },
+    "validation": {
+      "invalid": "Daži lauki nav aizpildīti pareizi.",
+      "required": "Nav aizpildīts obligāts lauks: {{field}}.",
+      "out_of_range": "Vērtība ārpus pieļaujamā diapazona: {{field}}.",
+      "unknown_field": "Nezināms lauks.",
+      "invalid_path": "Straumes ceļam jāsākas ar “/”, un tajā nedrīkst būt atstarpju vai “@”."
+    },
+    "net": {
+      "invalid_host": "Nederīga IP adrese vai resursdatora nosaukums.",
+      "forbidden_address": "Šī adrese nav atļauta (atgriezeniskā, saites lokālā vai mākoņa metadatu adrese).",
+      "not_private": "Atļautas tikai privātā LAN vai VPN adreses. Ja nepieciešams, pievienojiet tīklu mainīgajam CAMDASH_ALLOWED_CAMERA_NETWORKS.",
+      "dns_failed": "Neizdevās atrisināt resursdatora nosaukumu.",
+      "tcp_timeout": "Ierīce neatbild. Vai tā ir ieslēgta un sasniedzama no servera?",
+      "tcp_refused": "Ierīce noraidīja savienojumu šajā portā.",
+      "tls_failed": "TLS savienojums neizdevās (sertifikāts nav uzticams?).",
+      "generic": "Tīkla kļūda ({{code}})."
+    },
+    "rtsp": {
+      "auth_required": "Kamerai nepieciešams lietotājvārds un parole.",
+      "auth_failed": "Nepareizs lietotājvārds vai parole.",
+      "forbidden": "Kamera liedza piekļuvi šai straumei.",
+      "not_found": "Kamerā nav atrasts šāds straumes ceļš.",
+      "timeout": "Kamera laikus neatbildēja.",
+      "connection_closed": "Kamera pārtrauca savienojumu.",
+      "bad_response": "Negaidīta kameras atbilde.",
+      "bad_status": "Kamera atgrieza kļūdu ({{rtsp_status}}).",
+      "generic": "RTSP kļūda ({{code}})."
+    },
+    "onvif": {
+      "auth_failed": "ONVIF pieteikšanās neizdevās. Pārbaudiet lietotājvārdu, paroli un to, vai ONVIF ir ieslēgts.",
+      "timeout": "ONVIF laikus neatbildēja. Pārbaudiet ONVIF portu.",
+      "unreachable": "ONVIF pakalpojums nav sasniedzams. Pārbaudiet ONVIF portu vai ieslēdziet ONVIF ierīcē.",
+      "bad_response": "Neizdevās nolasīt ONVIF atbildi.",
+      "fault": "Ierīce noraidīja ONVIF pieprasījumu.",
+      "no_stream_uri": "Ierīce nepaziņoja straumes adresi.",
+      "channel_not_found": "Šāda kanāla nav (ierīcei ir {{channels}}).",
+      "generic": "ONVIF kļūda ({{code}})."
+    },
+    "stream": {
+      "path_unknown": "Straumes ceļš nav zināms: ieslēdziet ONVIF vai ievadiet ceļu manuāli.",
+      "no_substream": "Nav apakšstraumes; režģī tiks izmantota galvenā straume.",
+      "limit_reached": "Pārāk daudz vienlaicīgu straumju (maks. {{max}}). Aizveriet kādu citu kameru vai uzgaidiet.",
+      "upstream_error": "Kameras straume apstājās. Savienojas no jauna…",
+      "generic": "Straumes kļūda ({{code}})."
+    },
+    "go2rtc": {
+      "unreachable": "Straumēšanas pakalpojums nedarbojas.",
+      "rejected": "Straumēšanas pakalpojums noraidīja kameru.",
+      "generic": "Straumēšanas pakalpojuma kļūda ({{code}})."
+    },
+    "player": {
+      "mse_unsupported": "Šī pārlūkprogramma nevar atskaņot tiešraidi (nav Media Source Extensions). iPhone ierīcēm nepieciešama iOS 17.1 vai jaunāka versija.",
+      "codec_unsupported": "Šī pārlūkprogramma nevar atskaņot kameras video formātu (bieži H.265).",
+      "append_failed": "Video datus neizdevās atskaņot. Savienojas no jauna…",
+      "generic": "Atskaņotāja kļūda ({{code}})."
+    },
+    "codec": {
+      "h265_limited_browser_support": "H.265 straume: daudzas pārlūkprogrammas to nevar atskaņot. Ja iespējams, kameras iestatījumos iestatiet šai straumei H.264."
+    },
+    "imou": {
+      "offline": "Kamera Imou mākonī ir bezsaistē.",
+      "sleeping": "Kamera ir miega režīmā; tā pamodīsies, kad to atvērsiet.",
+      "upgrading": "Kamera atjaunina programmaparatūru.",
+      "device_not_found": "Imou jūsu kontā šo ierīci nepazīst.",
+      "channel_not_found": "Ierīcei nav šāda kanāla.",
+      "realname_required": "Pirms tiešraides straumju izveides Imou pieprasa jūsu izstrādātāja konta identitātes apstiprināšanu.",
+      "not_permitted": "Imou to neatļauj jūsu lietotnei vai ierīcei ({{vendor_code}}).",
+      "quota_exceeded": "Sasniegts Imou bezmaksas limits ({{vendor_code}}). Pārbaudiet sadaļu “My Resources” Imou izstrādātāja konsolē.",
+      "auth_failed": "Imou noraidīja App ID / App Secret ({{vendor_code}}).",
+      "timeout": "Imou mākonis laikus neatbildēja.",
+      "unreachable": "Neizdevās sasniegt Imou mākoni.",
+      "http_error": "Imou mākonis atgrieza kļūdu.",
+      "bad_response": "Negaidīta Imou mākoņa atbilde.",
+      "live_created_on_first_view": "Mākoņa straume tiks izveidota pirmajā atvēršanas reizē (pārbaudē tā netiek veidota, lai taupītu akumulatoru un limitu).",
+      "unexpected_stream_host": "Imou mākonis atgrieza negaidītu straumes adresi; tā tika bloķēta.",
+      "account_required": "Izvēlieties Imou mākoņa kontu.",
+      "generic": "Imou mākoņa kļūda ({{code}})."
+    },
+    "provider": {
+      "unknown": "Nezināms kameras veids.",
+      "invalid_config": "Nederīgi iestatījumi.",
+      "unsupported": "Šī kamera to neatbalsta.",
+      "auth_failed": "Pieteikšanās neizdevās.",
+      "unreachable": "Ierīce nav sasniedzama.",
+      "timeout": "Ierīce laikus neatbildēja.",
+      "quota_exceeded": "Limits sasniegts.",
+      "snapshot_unsupported": "Momentuzņēmumi netiek atbalstīti.",
+      "error": "Kamera ziņoja par kļūdu.",
+      "generic": "Kameras kļūda ({{code}})."
+    },
+    "bitvision": {
+      "default_password": "Šī ir rūpnīcas noklusējuma parole. Vispirms nomainiet to NVR ierīcē un tad ievadiet jauno."
+    },
+    "camera": {
+      "not_found": "Kamera nav atrasta.",
+      "account_required": "Izvēlieties mākoņa kontu.",
+      "provider_immutable": "Kameras veidu nevar mainīt."
+    },
+    "account": {
+      "not_found": "Konts nav atrasts.",
+      "in_use": "Šo kontu vēl izmanto kameras.",
+      "provider_immutable": "Konta veidu nevar mainīt."
+    },
+    "not_found": "Nav atrasts.",
+    "network": "Nevar sasniegt serveri.",
+    "unknown": "Radās kļūda.",
+    "unknown_code": "Kļūda: {{code}}"
+  }
+}

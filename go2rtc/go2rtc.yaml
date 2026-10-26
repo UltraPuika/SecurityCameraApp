@@ -1,0 +1,17 @@
+# go2rtc runs on the private compose network only. No ports are published and the
+# browser never talks to it directly: the camdash backend proxies MSE over WebSocket.
+api:
+  listen: ":1984"
+  origin: ""
+rtsp:
+  listen: ""
+rtmp:
+  listen: ""
+webrtc:
+  listen: ""
+srtp:
+  listen: ""
+log:
+  # Upstream errors can include source URLs; keep go2rtc's own log quiet.
+  level: error
+streams: {}
