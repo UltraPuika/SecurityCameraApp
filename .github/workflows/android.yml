@@ -1,9 +1,11 @@
 name: Android APK
 
 # Builds the Android app (Capacitor wrapper) and attaches the .apk to a GitHub Release.
-# Run it by pushing a tag like `v0.1.0`, or manually from the Actions tab.
+# Runs when the app wrapper changes on main, on a tag like `v0.1.0`, or manually from the Actions tab.
 on:
   push:
+    branches: [main]
+    paths: ["mobile/**", ".github/workflows/android.yml"]
     tags: ["v*"]
   workflow_dispatch:
 
@@ -76,8 +78,10 @@ jobs:
           path: ${{ env.APK }}
 
       - name: Attach to GitHub Release
-        if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: v${{ env.VERSION }}
+          name: Camdash ${{ env.VERSION }}
+          target_commitish: ${{ github.sha }}
           files: ${{ env.APK }}
           generate_release_notes: true

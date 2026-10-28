@@ -122,10 +122,10 @@ but is debug-signed, so each update needs an uninstall first.
 
 **Build and download:**
 
-- **Release:** push a version tag (`git tag v0.1.0 && git push origin v0.1.0`). The APK
-  appears under the repo's **Releases** as `camdash-0.1.0.apk`.
-- **Manual:** *Actions → Android APK → Run workflow*. Download the APK from the run's
-  *Artifacts*.
+- **Automatic:** every push to `main` that changes `mobile/` or the workflow builds a new
+  APK and publishes it under the repo's **Releases** (e.g. `camdash-0.0.3.apk`).
+- **Versioned:** push a tag (`git tag v0.1.0 && git push origin v0.1.0`) → `camdash-0.1.0.apk`.
+- **Manual:** *Actions → Android APK → Run workflow*; it is published to **Releases** too.
 
 On the phone, open the APK and allow *Install unknown apps* for your browser/file manager
 when Android asks.
