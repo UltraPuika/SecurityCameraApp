@@ -87,6 +87,17 @@ def test_cross_origin_post_rejected(client: TestClient) -> None:
     assert r.json()["error"]["code"] == "auth.bad_origin"
 
 
+def test_trusted_origin_accepted(make_settings: Callable[..., Settings]) -> None:
+    app = create_app(make_settings(trusted_origins="https://camdash.tail1234.ts.net/"))
+    with TestClient(app, base_url="https://testserver") as c:
+        r = c.post(
+            "/api/auth/login",
+            json={"username": "admin", "password": ADMIN_PASSWORD},
+            headers={"Origin": "https://camdash.tail1234.ts.net"},
+        )
+        assert r.status_code == 200
+
+
 def test_invalid_language_rejected(client: TestClient) -> None:
     csrf = login(client)
     r = client.put(

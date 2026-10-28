@@ -2,6 +2,7 @@ import hmac
 from collections.abc import Iterator
 from datetime import UTC, datetime
 from typing import Annotated
+from urllib.parse import urlsplit
 
 from fastapi import Depends, Request
 from sqlalchemy.orm import Session
@@ -14,6 +15,14 @@ from app.services import Services
 
 SAFE_METHODS = frozenset({"GET", "HEAD", "OPTIONS"})
 CSRF_HEADER = "X-CSRF-Token"
+
+
+def origin_allowed(origin: str | None, host: str | None, settings: Settings) -> bool:
+    if origin is None:
+        return False
+    if urlsplit(origin).netloc == host:
+        return True
+    return origin.rstrip("/").lower() in settings.trusted_origin_set
 
 
 def get_settings_dep(request: Request) -> Settings:

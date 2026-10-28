@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     static_dir: str = "/app/static"
     # Extra CIDRs cameras may live in, beyond RFC 1918 / CGNAT / ULA (comma-separated).
     allowed_camera_networks: str = ""
+    # Extra browser origins to accept (e.g. https://camdash.tailnet.ts.net) when a reverse
+    # proxy rewrites the Host header. Comma-separated.
+    trusted_origins: str = ""
     probe_timeout_seconds: float = Field(default=8.0, ge=1, le=60)
     go2rtc_url: str = "http://go2rtc:1984"
     stream_idle_seconds: int = Field(default=60, ge=5, le=3600)
@@ -56,6 +59,11 @@ class Settings(BaseSettings):
         if v is not None and len(v.get_secret_value()) < 12:
             raise ValueError("CAMDASH_ADMIN_PASSWORD must be at least 12 characters")
         return v
+
+    @property
+    def trusted_origin_set(self) -> frozenset[str]:
+        parts = (o.strip().rstrip("/").lower() for o in self.trusted_origins.split(","))
+        return frozenset(p for p in parts if p)
 
     @property
     def session_cookie_name(self) -> str:

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src http: https:"
+    />
+    <title>Camdash</title>
+    <link rel="stylesheet" href="launcher.css" />
+  </head>
+  <body>
+    <main>
+      <img src="icon.png" alt="" width="88" height="88" />
+      <h1 data-i18n="title">Camera dashboard</h1>
+
+      <section id="auto" hidden>
+        <p><span data-i18n="connecting">Connecting to</span> <strong id="auto-url"></strong>…</p>
+        <button id="change" type="button" class="secondary" data-i18n="change">Change server</button>
+      </section>
+
+      <form id="form" novalidate hidden>
+        <label for="url" data-i18n="label">Dashboard address</label>
+        <input
+          id="url"
+          type="url"
+          inputmode="url"
+          autocomplete="url"
+          autocapitalize="none"
+          spellcheck="false"
+          placeholder="https://camdash.example.ts.net"
+          required
+        />
+        <small data-i18n="hint">The address you open the dashboard with in a browser (for example your Tailscale HTTPS address).</small>
+        <p id="error" class="error" role="alert" hidden></p>
+        <button type="submit" data-i18n="connect">Connect</button>
+      </form>
+    </main>
+    <script src="launcher.js"></script>
+  </body>
+</html>

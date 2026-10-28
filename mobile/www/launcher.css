@@ -1,0 +1,66 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0b0f14;
+  color: #d8e0ea;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+main {
+  width: min(24rem, 100% - 2rem);
+  text-align: center;
+}
+h1 {
+  font-size: 1.3rem;
+}
+form {
+  text-align: left;
+}
+label {
+  display: block;
+  color: #8796a8;
+  margin-bottom: 0.3rem;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 0 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #263241;
+  background: #18202a;
+  color: inherit;
+  font: inherit;
+}
+small {
+  display: block;
+  color: #8796a8;
+  margin: 0.4rem 0 1rem;
+}
+button {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 6px;
+  background: #3fb68b;
+  color: #04120c;
+  font: inherit;
+  font-weight: 600;
+}
+button.secondary {
+  background: #18202a;
+  color: #d8e0ea;
+  border: 1px solid #263241;
+}
+button:disabled {
+  opacity: 0.6;
+}
+.error {
+  color: #e5534b;
+}

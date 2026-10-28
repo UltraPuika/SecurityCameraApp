@@ -2,7 +2,6 @@ import logging
 from collections.abc import AsyncIterator, Awaitable, Callable
 from contextlib import asynccontextmanager
 from pathlib import Path
-from urllib.parse import urlsplit
 
 import httpx
 from alembic import command
@@ -17,7 +16,7 @@ from app.bootstrap import ensure_admin
 from app.config import Settings, get_settings
 from app.crypto import SecretBox
 from app.db import Database
-from app.deps import SAFE_METHODS
+from app.deps import SAFE_METHODS, origin_allowed
 from app.errors import ApiError, api_error_handler, validation_error_handler
 from app.netguard import NetGuard, parse_networks
 from app.routers import accounts, auth, cameras, diagnostics, health, live
@@ -90,7 +89,9 @@ def create_app(
     ) -> Response:
         if request.method not in SAFE_METHODS:
             origin = request.headers.get("origin")
-            if origin is not None and urlsplit(origin).netloc != request.headers.get("host"):
+            if origin is not None and not origin_allowed(
+                origin, request.headers.get("host"), settings
+            ):
                 return JSONResponse({"error": {"code": "auth.bad_origin"}}, status_code=403)
         response = await call_next(request)
         response.headers["Content-Security-Policy"] = CSP

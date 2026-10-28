@@ -1,0 +1,17 @@
+{
+  "name": "camdash-android",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Android wrapper (Capacitor) for the self-hosted camera dashboard",
+  "scripts": {
+    "icons": "node scripts/android-icons.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3"
+  }
+}

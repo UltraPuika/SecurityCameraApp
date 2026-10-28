@@ -9,13 +9,13 @@ import logging
 import re
 from datetime import UTC, datetime
 from typing import Any
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote
 
 import websockets
 from fastapi import APIRouter, WebSocket
 from starlette.websockets import WebSocketDisconnect
 
-from app.deps import session_from_token
+from app.deps import origin_allowed, session_from_token
 from app.logredact import redact
 from app.models import Camera
 from app.providers import PROVIDERS
@@ -31,8 +31,9 @@ _CODECS_RE = re.compile(r'codecs="([^"]*)"')
 
 
 def _same_origin(ws: WebSocket) -> bool:
-    origin = ws.headers.get("origin")
-    return origin is not None and urlsplit(origin).netloc == ws.headers.get("host")
+    return origin_allowed(
+        ws.headers.get("origin"), ws.headers.get("host"), ws.app.state.settings
+    )
 
 
 async def _error(ws: WebSocket, code: str, close_code: int = 4000, **detail: Any) -> None:

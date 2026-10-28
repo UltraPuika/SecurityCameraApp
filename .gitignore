@@ -12,3 +12,8 @@ node_modules/
 dist/
 *.tsbuildinfo
 .check-output.txt
+# Generated in CI by `npx cap add android`
+mobile/android/
+*.apk
+*.jks
+*.keystore
